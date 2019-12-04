@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'Julee';
+    src:  url('../fonts/Julee/Julee-Regular.ttf');
+  }
+:root{
+    box-sizing: border-box;
+}
+*,
+::before,
+::after{
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Julee',sans-serif;
+    font-size: 1.8vw;
+    background-color: #709b90;
+}
+body * + * {
+    margin-top: 1.5em;
+}
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 1.5em;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+header,
+nav{
+    grid-column: 1/3;
+    grid-row: span 1;
+}
+.main{
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
+}
+.sidebar-top {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+.sidebar-bottom {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+.site-nav{
+    display: -webkit-flex;
+    display: flex;
+    padding-left: .5em;
+    background-color: rgb(4, 54, 54);
+    list-style-type: none;
+}
+.site-nav > li {
+    margin-top: 0;
+}
+.site-nav > li + li{
+    margin-left: 1.5em;
+}
+.site-nav > li >a{
+    display: block;
+    padding: .5em 1em;
+    background: darkcyan;
+    color: white;
+    text-decoration: none;
+}
+.site-nav > .nav-right{
+    margin-left:auto;
+}
+.tile{
+    padding: 1.5em;
+    background-color: #fff;
+}
+.tile>:first-child{
+    margin-top: 0;
+}
+.tile * + * {
+    margin-top:1.0em;
+}
+/* .flex{
+    display: flex;
+}
+.flex >*+*{
+    margin-top: 0;
+    margin-left: 1.5em;
+} */
+
+
+.login-form h3{
+    margin: 0;
+    font-size:.9em;
+    font-weight:bold;
+    text-align: right;
+    text-transform: uppercase;
+}
+.login-form input:not([type=checkbox]):not([type=radio]) {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+}
+.login-form button{
+    margin-top:1em;
+    border:1px solid darkcyan;
+    background-color: white;
+    padding: .5em 1em;
+    cursor: pointer;
+}
+.centered{
+    text-align:center;
+}
+.cost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: .7;
+}
+.cost > span{
+    margin-top: 0;
+}
+.cost-currency {
+    font-size: 2rem;
+}
+.cost-dollars {
+    font-size: 4rem;
+}
+.cost-cents {
+    font-size: 1.5rem;
+    align-self: flex-start;
+}
+.cta-button {
+    display: block;
+    background-color: darkcyan;
+    color: white;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0.5em;
+}
+.grid>*{
+    background-color: darkgray;
+    color: white;
+    padding: 2em;
+    border-radius: 0.5em;
+}
